@@ -8,6 +8,7 @@
 int _strlen(const char *str)
 {
 	int length = 0;
+
 	while (*str++)
 		length++;
 	return (length);
@@ -21,6 +22,7 @@ int _strlen(const char *str)
 char *_strcopy(char *dest, char *src)
 {
 	int i;
+
 	for (i = 0; src[i]; i++)
 		dest[i] = src[i];
 	dest[i] = '\0';
@@ -38,6 +40,7 @@ dog_t *new_dog(char *name, float age, char *owner)
 {
 	dog_t *dog;
 	if (!name || age < 0 || !owner)
+
 		return (NULL);
 	dog = (dog_t *) malloc(sizeof(dog_t));
 	if (dog == NULL)
